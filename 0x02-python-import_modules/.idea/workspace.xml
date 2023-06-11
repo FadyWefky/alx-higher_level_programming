@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3772f12d-bc5e-4930-b28d-e8ec1b40068f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/0x02-python-import_modules.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-add.py" beforeDir="false" afterPath="$PROJECT_DIR$/0-add.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0-import_add.py" beforeDir="false" afterPath="$PROJECT_DIR$/0-import_add.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1-calculation.py" beforeDir="false" afterPath="$PROJECT_DIR$/1-calculation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/100-my_calculator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/101-easy_print.py" beforeDir="false" afterPath="$PROJECT_DIR$/101-easy_print.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/102-magic_calculation.py" beforeDir="false" afterPath="$PROJECT_DIR$/102-magic_calculation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/103-fast_alphabet.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2-args.py" beforeDir="false" afterPath="$PROJECT_DIR$/2-args.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-infinite_add.py" beforeDir="false" afterPath="$PROJECT_DIR$/3-infinite_add.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-hidden_discovery.py" beforeDir="false" afterPath="$PROJECT_DIR$/4-hidden_discovery.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5-variable_load.py" beforeDir="false" afterPath="$PROJECT_DIR$/5-variable_load.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculator_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculator_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/100-my_calculator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
