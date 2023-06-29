@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3772f12d-bc5e-4930-b28d-e8ec1b40068f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/0-import_add.py" beforeDir="false" afterPath="$PROJECT_DIR$/0-import_add.py" afterDir="false" />
-    </list>
+    <list default="true" id="3772f12d-bc5e-4930-b28d-e8ec1b40068f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +27,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/courses/Mofreh/ALX/Python/alx-higher_level_programming/0x02-python-import_modules"
+    "last_opened_file_path": "E:/courses/Mofreh/ALX/Python/alx-higher_level_programming/0x04-python-more_data_structures"
   }
 }]]></component>
   <component name="RunManager" selected="Python.add_0">
