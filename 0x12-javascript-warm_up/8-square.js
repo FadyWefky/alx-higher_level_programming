@@ -1,3 +1,4 @@
+#!/usr/bin/node
 const size = parseInt(process.argv[2]);
 const str = 'X';
 if (Number.isInteger(size)) {
