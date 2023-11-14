@@ -1,5 +1,4 @@
-#!/usr/bin/node
-// add
+
 function add (a, b) {
   console.log(a + b);
 }

@@ -1,5 +1,4 @@
-#!/usr/bin/node
-// Count arguments
+
 const myArgs = process.argv.length;
 if (myArgs === 2) {
   console.log('No argument');

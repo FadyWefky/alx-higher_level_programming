@@ -1,5 +1,4 @@
-#!/usr/bin/node
-// Number
+
 const num = parseInt(process.argv[2]);
 if (Number.isInteger(num)) {
   console.log('My number: ' + num);

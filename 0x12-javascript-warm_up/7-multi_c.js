@@ -1,5 +1,4 @@
-#!/usr/bin/node
-// Print x times
+
 const num = parseInt(process.argv[2]);
 if (Number.isInteger(num)) {
   for (let i = 0; i < num; i++) {
