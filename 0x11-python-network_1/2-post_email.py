@@ -1,18 +1,14 @@
 #!/usr/bin/python3
-""" POST an email """
+"""Python script that takes in a URL and an email, sends a POST"""
 
-if __name__ == "__main__":
-    import urllib.request
-    import sys
-    try:
-        url = sys.argv[1]
-        values = {"email": sys.argv[2]}
-        data = urllib.parse.urlencode(values)
-        data = data.encode('ascii')
-        req = urllib.request.Request(url, data)
-        with urllib.request.urlopen(req) as response:
-            Xreq = response.read().decode('utf-8')
-            print(Xreq)
+import urllib.parse
+import urllib.request
+import urllib.error
+import sys
 
-    except:
-        pass
+try:
+    data = urllib.parse.urlencode({'email': sys.argv[2]}).encode()
+    with urllib.request.urlopen(sys.argv[1], data=data) as req:
+        print(req.read().decode('utf8'))
+except (urllib.error.URLError, IndexError) as e:
+    print(e)

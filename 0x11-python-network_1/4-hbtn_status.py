@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-""" Whats my status with requests """
+"""Fetch URL using requests package"""
 
 if __name__ == "__main__":
-    import requests
-    url = "https://intranet.hbtn.io/status"
-    r = requests.get(url)
-    body = r.text
-    print("Body response:")
-    print("\t- type: {}".format(type(body)))
-    print("\t- content: {}".format(body))
+    from requests import get
+
+    try:
+        req = get('https://intranet.hbtn.io/status')
+        print('Body response:')
+        print('\t- type: {}'.format(type(req.text)))
+        print('\t- content: {}'.format(req.text))
+    except Exception as err:
+        print(err)

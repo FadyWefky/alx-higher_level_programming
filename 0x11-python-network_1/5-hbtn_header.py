@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-""" Response header with requests """
+"""Get value of X-Request-Id header from requested URL"""
 
 if __name__ == "__main__":
-    import requests
-    import sys
-    url = sys.argv[1]
-    r = requests.get(url)
-    Xreq = r.headers.get('X-Request-Id')
-    print(Xreq)
+    from requests import get
+    from sys import argv
+
+    try:
+        req = get(argv[1])
+        print(req.headers.get('X-Request-Id'))
+    except Exception as err:
+        print(err)

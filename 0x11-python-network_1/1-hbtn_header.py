@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-""" Response header value """
+"""Python script that takes in a URL"""
 
 if __name__ == "__main__":
     import urllib.request
+    import urllib.error
     import sys
-    try:
-        url = sys.argv[1]
-        with urllib.request.urlopen(url) as response:
-            Xreq = response.info().get('X-Request-Id')
-            print(Xreq)
 
-    except:
-        pass
-    
+    try:
+        with urllib.request.urlopen(sys.argv[1]) as req:
+            print(req.getheader('X-Request-Id'))
+    except (urllib.error.URLError, IndexError) as err:
+        print(err)

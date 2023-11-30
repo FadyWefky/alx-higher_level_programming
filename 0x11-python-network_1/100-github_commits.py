@@ -1,26 +1,21 @@
 #!/usr/bin/python3
-""" Time for an interview """
+"""
+Get the 10 most recent commits from the repository specified
+"""
 
 if __name__ == "__main__":
-    from requests import get, auth
-    import sys
-    repo = sys.argv[1]
-    user = sys.argv[2]
-    url = 'https://api.github.com/repos/{}/{}/commits'.format(user, repo)
-    r = get(url)
+    from requests import get
+    from sys import argv
+
+    url = 'https://api.github.com/repos/{}/{}/commits'.format(argv[2], argv[1])
+
     try:
-        js = r.json()
-        for j in js[:10]:
-            author, name = None, None
-            # date = None
-            sha = j.get('sha')
-            commit = j.get('commit')
-            if commit:
-                author = commit.get('author')
-                # message = commit.get('message')
-            if author:
-                name = author.get('name')
-                # date = author.get('date')
-            print("{}: {}".format(sha, name))
-    except ValueError:
-        print("Not a valid JSON")
+        req = get(url)
+        j = req.json()
+        for commit in j[:10]:
+            print('{}: {}'.format(commit.get('sha'),
+                                  commit.get('commit')
+                                  .get('author')
+                                  .get('name')))
+    except IndexError as err:
+        print(err)

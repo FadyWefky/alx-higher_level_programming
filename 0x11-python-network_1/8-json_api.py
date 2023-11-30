@@ -1,20 +1,20 @@
 #!/usr/bin/python3
-""" Search API """
+"""Send a POST request to the specified URL in the variable 'q'"""
 
 if __name__ == "__main__":
-    import requests
-    import sys
-    url = "http://0.0.0.0:5000/search_user"
-    if len(sys.argv) > 1:
-        data = {'q': sys.argv[1]}
-    else:
-        data = {'q': ""}
+    from requests import post
+    from sys import argv
+
     try:
-        r = requests.post(url, data)
-        js = r.json()
-        if not js:
-            print("No result")
+        if len(argv) < 2:
+            letter = ""
         else:
-            print("[{}] {}".format(js.get('id'), js.get('name')))
+            letter = argv[1]
+        req = post('http://0.0.0.0:5000/search_user', data={'q': letter})
+        j = req.json()
+        if not j:
+            print('No result')
+        else:
+            print('[{}] {}'.format(j.get('id'), j.get('name')))
     except ValueError:
-        print("Not a valid JSON")
+        print('Not a valid JSON')
