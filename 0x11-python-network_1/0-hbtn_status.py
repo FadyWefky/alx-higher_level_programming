@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-""" Python script that fetches https://intranet.hbtn.io/status"""
-
-import urllib.request
-import urllib.error
+"""fetches https://alx-intranet.hbtn.io/status
+"""
 
 
-try:
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as req:
-        body = req.read()
-        print('Body response:')
-        print('\t- type: {}'.format(type(body)))
-        print('\t- content: {}'.format(body))
-        print('\t- utf8 content: {}'.format(body.decode('utf8')))
-except urllib.error.URLError as err:
-    print(err)
+if __name__ == "__main__":
+    import urllib.request
+
+    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as res:
+        content = res.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(content)))
+        print("\t- content: {}".format(content))
+        print("\t- utf8 content: {}".format(content.decode('utf-8')))

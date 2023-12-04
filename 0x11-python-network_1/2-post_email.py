@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""Python script that takes in a URL and an email, sends a POST"""
+"""displays the value of the X-Request-Id variable found in
+the header of the response.
+"""
 
-import urllib.parse
-import urllib.request
-import urllib.error
-import sys
 
-try:
-    data = urllib.parse.urlencode({'email': sys.argv[2]}).encode()
-    with urllib.request.urlopen(sys.argv[1], data=data) as req:
-        print(req.read().decode('utf8'))
-except (urllib.error.URLError, IndexError) as e:
-    print(e)
+if __name__ == "__main__":
+    from urllib.request import urlopen, Request
+    from urllib.parse import urlencode
+    from sys import argv
+
+    value = {"email": argv[2]}
+    request = Request(
+            argv[1], urlencode(value).encode("ascii"))
+    with urlopen(request) as response:
+        head = response.headers.get('X-Request-Id')
+        print(response.read().decode('utf-8'))

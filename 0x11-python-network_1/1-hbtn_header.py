@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Python script that takes in a URL"""
+"""displays the value of the X-Request-Id variable found in
+the header of the response.
+"""
+
 
 if __name__ == "__main__":
     import urllib.request
-    import urllib.error
     import sys
 
-    try:
-        with urllib.request.urlopen(sys.argv[1]) as req:
-            print(req.getheader('X-Request-Id'))
-    except (urllib.error.URLError, IndexError) as err:
-        print(err)
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        head = response.headers.get('X-Request-Id')
+        print(head)
