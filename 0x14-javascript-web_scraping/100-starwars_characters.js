@@ -1,22 +1,19 @@
 #!/usr/bin/node
-// computes the number of tasks completed by user id
-const request = require('request');
-const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 
-request(url, function (err, res, body) {
-  if (err) {
-    console.log(err);
-  } else {
-    const data = JSON.parse(body).characters;
-    for (const char of data) {
-      request(char, function (err, res, body) {
-        if (err) {
-          console.log(err);
-        } else {
-          const charName = JSON.parse(body).name;
-          console.log(charName);
-        }
-      });
-    }
+const request = require('request');
+const id = process.argv[2];
+const url = 'https://swapi-api.hbtn.io/api/films/';
+
+request(url + id, function (error, response, body) {
+  if (error) {
+    console.log(error);
   }
+  JSON.parse(body).characters.forEach(function (url, callback) {
+    request(url, function (error, response, body) {
+      if (error) {
+        console.error(error);
+      }
+      console.log(JSON.parse(body).name);
+    });
+  });
 });
